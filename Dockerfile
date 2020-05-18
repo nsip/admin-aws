@@ -15,8 +15,11 @@ RUN apk --update add ca-certificates
 # STEP 1 build executable binary
 ############################
 FROM golang:1.13-stretch as builder
-COPY --from=certs /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+COPY --from=certs /etc/ssl /etc/ssl
+RUN update-ca-certificates
+#COPY --from=certs /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 COPY . .
+#COPY /etc/ssl /etc/
 RUN go get
 RUN go get github.com/labstack/echo/middleware
 RUN go get github.com/nsip/admin-aws

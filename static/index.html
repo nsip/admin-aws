@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>NSIP.EDU.AU Docbook Dashboard</title>
+    <title>NSIP.EDU.AU AWS Dashboard</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -41,7 +41,7 @@
               <!--
               <img src="https://d19m59y37dris4.cloudfront.net/dashboard/1-4-7/img/avatar-7.jpg" alt="person" class="img-fluid rounded-circle">
           -->
-            <h2 class="h5">NSIP/NIAS</h2><span>Docker Dashboard</span>
+            <h2 class="h5">NSIP/NIAS</h2><span>AWS Dashboard</span>
           </div>
           <!-- Small Brand information, appears on minimized sidebar-->
           <div class="sidenav-header-logo"><a href="index.html" class="brand-small text-center"> <strong>B</strong><strong class="text-primary">D</strong></a></div>
@@ -70,7 +70,7 @@
           <div class="container-fluid">
             <div class="navbar-holder d-flex align-items-center justify-content-between">
               <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"> </i></a><a href="index.html" class="navbar-brand">
-                  <div class="brand-text d-none d-md-inline-block"><span>Docker</span><strong class="text-primary">Dashboard</strong></div></a></div>
+                  <div class="brand-text d-none d-md-inline-block"><span>AWS</span><strong class="text-primary">Dashboard</strong></div></a></div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                 <!-- Notifications dropdown-->
                 <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell"></i><span class="badge badge-warning">12</span></a>
@@ -142,7 +142,7 @@
             <div class="col-xl-2 col-md-4 col-6">
               <div class="wrapper count-title d-flex">
                 <div class="icon"><i class="icon-user"></i></div>
-                <div class="name"><strong class="text-uppercase">Running</strong><span>Dockers</span>
+                <div class="name"><strong class="text-uppercase">Running</strong><span>AWS</span>
                   <div class="count-number">25</div>
                 </div>
               </div>
@@ -164,7 +164,7 @@
         <div class="container-fluid">
           <div class="row d-flex align-items-md-stretch">
             <!-- To Do List-->
-            <div class="col-lg-6 col-md-12">
+            <div class="col-lg-9 col-md-12">
               <div class="card to-do">
                 <h2 class="display h4">Running</h2>
 		<p>TODO</p>
@@ -172,11 +172,12 @@
 			<thead>
 				<tr>
 				<th>ID</th>
-				<th>Image</th>
-				<th>Ports</th>
+				<th>Region</th>
+				<th>Name</th>
+				<th>PublicIP</th>
 				</tr>
 			</thead>
-			<tbody id="dockerRunning">
+			<tbody id="ec2s">
 				<tr>
 					<td></td>
 					<td>Loading</td>
@@ -187,24 +188,9 @@
               </div>
             </div>
             <!-- To Do List-->
-            <div class="col-lg-6 col-md-12">
+            <div class="col-lg-3 col-md-12">
               <div class="card to-do">
-                <h2 class="display h4">Images</h2>
-		<p>TODO</p>
-			<table class="table table-dark table-striped">
-			<thead>
-				<tr>
-				<th>ID</th>
-				<th>Name:Tag</th>
-				</tr>
-			</thead>
-			<tbody id="dockerImages">
-				<tr>
-					<td></td>
-					<td>Loading</td>
-				</tr>
-        			</tbody>
-        			</table>
+                <h2 class="display h4">TODO</h2>
               </div>
             </div>
         </div>
@@ -309,40 +295,19 @@
 
 	<script>
 		$.ajax({
-		  url: '/api/running',
+		  url: '/api/ec2s',
 		  type: 'get',
 		  dataType: 'json',
 		  contentType: 'application/json',
 		  success: function (data) {
               if (data) {
-    			  $('#dockerRunning').empty();
+    			  $('#ec2s').empty();
                   data.forEach(function(d) {
-        			$('#dockerRunning').append("<tr>"
+        			$('#ec2s').append("<tr>"
                         + "<td>" + d.ID.substr(0,4) + "</td>"
-                        + "<td>" + d.Image + "</td>"
-                        + "<td>" + d.Ports.join(",") + "</td>"
-                        + "</tr>"
-                    );
-                  });
-              }
-		  },
-		  error: function (err) {
-			console.log("ERROR", err);
-		  },
-		});
-
-		$.ajax({
-		  url: '/api/images',
-		  type: 'get',
-		  dataType: 'json',
-		  contentType: 'application/json',
-		  success: function (data) {
-              if (data) {
-    			  $('#dockerImages').empty();
-                  data.forEach(function(d) {
-        			$('#dockerImages').append("<tr>"
-                        + "<td>" + d.ID.substr(0,4) + "</td>"
-                        + "<td>" + d.RepoTag + "</td>"
+                        + "<td>" + d.Region + "</td>"
+                        + "<td>" + d.Name + "</td>"
+                        + "<td>" + d.PublicIP + "</td>"
                         + "</tr>"
                     );
                   });

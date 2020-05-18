@@ -3,6 +3,7 @@ package main
 // Use api and Test
 import (
 	"fmt"
+	"time"
 
 	// "encoding/xml"
 	"net/http"
@@ -30,8 +31,26 @@ func main() {
 
 	e.Static("/", "static")
 
-	e.GET("/api/ec2", func(c echo.Context) error {
-		doc.UpdateEc2()
+	// Intial update
+	doc.UpdateEc2()
+
+	// Regular updates - every 5 minutes
+	ticker := time.NewTicker(300 * time.Second)
+	quit := make(chan struct{})
+	go func() {
+		for {
+			select {
+			case <-ticker.C:
+				fmt.Printf("TimerHit: update ec2\n")
+				doc.UpdateEc2()
+			case <-quit:
+				ticker.Stop()
+				return
+			}
+		}
+	}()
+
+	e.GET("/api/ec2s", func(c echo.Context) error {
 		return c.JSON(http.StatusOK, doc.Ec2s)
 	})
 

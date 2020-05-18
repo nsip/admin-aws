@@ -10,6 +10,6 @@ import (
 func main() {
 	doc := adminaws.New()
 	doc.UpdateEc2()
-	fmt.Printf("%+v\n", doc.Regions)
-	fmt.Printf("%+v\n", doc.Ec2s)
+	fmt.Printf("REGIONS=%+v\n\n\n", doc.Regions)
+	fmt.Printf("EC2S=%+v\n\n\n", doc.Ec2s)
 }

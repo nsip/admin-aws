@@ -9,14 +9,12 @@
 # STEP 0 Get them certificates
 ############################
 FROM alpine:latest as certs
-RUN apk --update add ca-certificates
+RUN apk --no-cache add ca-certificates
 
 ############################
 # STEP 1 build executable binary
 ############################
 FROM golang:1.13-stretch as builder
-COPY --from=certs /etc/ssl /etc/ssl
-RUN update-ca-certificates
 #COPY --from=certs /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 COPY . .
 #COPY /etc/ssl /etc/
@@ -29,6 +27,7 @@ RUN GOOS=linux GOARCH=amd64 go build -ldflags="-w -s" -o /go/bin/adminaws cmd/we
 ############################
 FROM debian:stretch
 COPY --from=builder /go/bin/adminaws /go/bin/adminaws
+COPY --from=certs /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY static/index.html /go/bin/static/index.html
 WORKDIR /go/bin
 CMD ["/go/bin/adminaws"]

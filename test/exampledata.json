@@ -1,0 +1,576 @@
+  Reservations: [
+    {
+      Instances: [{
+          AmiLaunchIndex: 0,
+          Architecture: "x86_64",
+          BlockDeviceMappings: [{
+              DeviceName: "/dev/sda1",
+              Ebs: {
+                AttachTime: 2019-02-25 05:00:29 +0000 UTC,
+                DeleteOnTermination: true,
+                Status: "attached",
+                VolumeId: "vol-0bfb2c3260810fe71"
+              }
+            }],
+          CapacityReservationSpecification: {
+            CapacityReservationPreference: "open"
+          },
+          ClientToken: "",
+          CpuOptions: {
+            CoreCount: 2,
+            ThreadsPerCore: 1
+          },
+          EbsOptimized: false,
+          EnaSupport: true,
+          HibernationOptions: {
+            Configured: false
+          },
+          Hypervisor: "xen",
+          ImageId: "ami-07a3bd4944eb120a0",
+          InstanceId: "i-0f758a06fcfd4bb3d",
+          InstanceType: "t2.medium",
+          KeyName: "NSIPSSH",
+          LaunchTime: 2019-03-04 15:18:25 +0000 UTC,
+          MetadataOptions: {
+            HttpEndpoint: "enabled",
+            HttpPutResponseHopLimit: 1,
+            HttpTokens: "optional",
+            State: "applied"
+          },
+          Monitoring: {
+            State: "disabled"
+          },
+          NetworkInterfaces: [{
+              Association: {
+                IpOwnerId: "amazon",
+                PublicDnsName: "ec2-13-211-190-184.ap-southeast-2.compute.amazonaws.com",
+                PublicIp: "13.211.190.184"
+              },
+              Attachment: {
+                AttachTime: 2019-02-25 05:00:28 +0000 UTC,
+                AttachmentId: "eni-attach-0253b0a8bcdda88b9",
+                DeleteOnTermination: true,
+                DeviceIndex: 0,
+                Status: "attached"
+              },
+              Description: "",
+              Groups: [{
+                  GroupId: "sg-dc8549b9",
+                  GroupName: "SERVER"
+                }],
+              InterfaceType: "interface",
+              MacAddress: "0a:4b:01:82:4a:f2",
+              NetworkInterfaceId: "eni-0c07ded7208809012",
+              OwnerId: "770552462706",
+              PrivateDnsName: "ip-172-31-47-82.ap-southeast-2.compute.internal",
+              PrivateIpAddress: "172.31.47.82",
+              PrivateIpAddresses: [{
+                  Association: {
+                    IpOwnerId: "amazon",
+                    PublicDnsName: "ec2-13-211-190-184.ap-southeast-2.compute.amazonaws.com",
+                    PublicIp: "13.211.190.184"
+                  },
+                  Primary: true,
+                  PrivateDnsName: "ip-172-31-47-82.ap-southeast-2.compute.internal",
+                  PrivateIpAddress: "172.31.47.82"
+                }],
+              SourceDestCheck: true,
+              Status: "in-use",
+              SubnetId: "subnet-092e7f4f",
+              VpcId: "vpc-e054be85"
+            }],
+          Placement: {
+            AvailabilityZone: "ap-southeast-2c",
+            GroupName: "",
+            Tenancy: "default"
+          },
+          PrivateDnsName: "ip-172-31-47-82.ap-southeast-2.compute.internal",
+          PrivateIpAddress: "172.31.47.82",
+          PublicDnsName: "ec2-13-211-190-184.ap-southeast-2.compute.amazonaws.com",
+          PublicIpAddress: "13.211.190.184",
+          RootDeviceName: "/dev/sda1",
+          RootDeviceType: "ebs",
+          SecurityGroups: [{
+              GroupId: "sg-dc8549b9",
+              GroupName: "SERVER"
+            }],
+          SourceDestCheck: true,
+          State: {
+            Code: 16,
+            Name: "running"
+          },
+          StateTransitionReason: "",
+          SubnetId: "subnet-092e7f4f",
+          Tags: [{
+              Key: "name",
+              Value: "n2test"
+            },{
+              Key: "Name",
+              Value: "nias2 cli"
+            }],
+          VirtualizationType: "hvm",
+          VpcId: "vpc-e054be85"
+        }],
+      OwnerId: "770552462706",
+      ReservationId: "r-0a31f08d5a2fec2f4"
+    },
+    {
+      Instances: [{
+          AmiLaunchIndex: 0,
+          Architecture: "x86_64",
+          BlockDeviceMappings: [{
+              DeviceName: "/dev/sda1",
+              Ebs: {
+                AttachTime: 2015-11-11 03:01:10 +0000 UTC,
+                DeleteOnTermination: true,
+                Status: "attached",
+                VolumeId: "vol-1cf72bd6"
+              }
+            }],
+          CapacityReservationSpecification: {
+            CapacityReservationPreference: "open"
+          },
+          ClientToken: "144721083999860331",
+          CpuOptions: {
+            CoreCount: 1,
+            ThreadsPerCore: 1
+          },
+          EbsOptimized: false,
+          HibernationOptions: {
+            Configured: false
+          },
+          Hypervisor: "xen",
+          ImageId: "ami-7791d84d",
+          InstanceId: "i-3765f9e8",
+          InstanceType: "t1.micro",
+          KernelId: "aki-c362fff9",
+          KeyName: "NSIPSSH",
+          LaunchTime: 2020-02-05 06:24:23 +0000 UTC,
+          MetadataOptions: {
+            HttpEndpoint: "enabled",
+            HttpPutResponseHopLimit: 1,
+            HttpTokens: "optional",
+            State: "applied"
+          },
+          Monitoring: {
+            State: "disabled"
+          },
+          NetworkInterfaces: [{
+              Association: {
+                IpOwnerId: "770552462706",
+                PublicDnsName: "ec2-54-66-143-89.ap-southeast-2.compute.amazonaws.com",
+                PublicIp: "54.66.143.89"
+              },
+              Attachment: {
+                AttachTime: 2015-11-11 03:01:06 +0000 UTC,
+                AttachmentId: "eni-attach-4202427c",
+                DeleteOnTermination: true,
+                DeviceIndex: 0,
+                Status: "attached"
+              },
+              Description: "",
+              Groups: [{
+                  GroupId: "sg-b994b1dc",
+                  GroupName: "Files"
+                }],
+              InterfaceType: "interface",
+              MacAddress: "02:0e:67:64:30:f5",
+              NetworkInterfaceId: "eni-eade028d",
+              OwnerId: "770552462706",
+              PrivateDnsName: "ip-172-31-11-122.ap-southeast-2.compute.internal",
+              PrivateIpAddress: "172.31.11.122",
+              PrivateIpAddresses: [{
+                  Association: {
+                    IpOwnerId: "770552462706",
+                    PublicDnsName: "ec2-54-66-143-89.ap-southeast-2.compute.amazonaws.com",
+                    PublicIp: "54.66.143.89"
+                  },
+                  Primary: true,
+                  PrivateDnsName: "ip-172-31-11-122.ap-southeast-2.compute.internal",
+                  PrivateIpAddress: "172.31.11.122"
+                }],
+              SourceDestCheck: true,
+              Status: "in-use",
+              SubnetId: "subnet-437e8426",
+              VpcId: "vpc-e054be85"
+            }],
+          Placement: {
+            AvailabilityZone: "ap-southeast-2a",
+            GroupName: "",
+            Tenancy: "default"
+          },
+          PrivateDnsName: "ip-172-31-11-122.ap-southeast-2.compute.internal",
+          PrivateIpAddress: "172.31.11.122",
+          ProductCodes: [{
+              ProductCodeId: "3mvrszi7x9jxxx1ubqifp4ctj",
+              ProductCodeType: "marketplace"
+            }],
+          PublicDnsName: "ec2-54-66-143-89.ap-southeast-2.compute.amazonaws.com",
+          PublicIpAddress: "54.66.143.89",
+          RootDeviceName: "/dev/sda1",
+          RootDeviceType: "ebs",
+          SecurityGroups: [{
+              GroupId: "sg-b994b1dc",
+              GroupName: "Files"
+            }],
+          SourceDestCheck: true,
+          State: {
+            Code: 16,
+            Name: "running"
+          },
+          StateTransitionReason: "",
+          SubnetId: "subnet-437e8426",
+          Tags: [{
+              Key: "Name",
+              Value: "files - ownCloud"
+            }],
+          VirtualizationType: "paravirtual",
+          VpcId: "vpc-e054be85"
+        }],
+      OwnerId: "770552462706",
+      ReservationId: "r-f93f3a25"
+    },
+    {
+      Instances: [{
+          AmiLaunchIndex: 0,
+          Architecture: "x86_64",
+          BlockDeviceMappings: [{
+              DeviceName: "/dev/sda1",
+              Ebs: {
+                AttachTime: 2019-02-11 00:02:28 +0000 UTC,
+                DeleteOnTermination: true,
+                Status: "attached",
+                VolumeId: "vol-05c481f31d7b97b90"
+              }
+            }],
+          CapacityReservationSpecification: {
+            CapacityReservationPreference: "open"
+          },
+          ClientToken: "",
+          CpuOptions: {
+            CoreCount: 2,
+            ThreadsPerCore: 1
+          },
+          EbsOptimized: false,
+          EnaSupport: true,
+          HibernationOptions: {
+            Configured: false
+          },
+          Hypervisor: "xen",
+          ImageId: "ami-0ed09ae0a696320f5",
+          InstanceId: "i-03fd17c6682d1bf83",
+          InstanceType: "t2.medium",
+          KeyName: "NSIPSSH",
+          LaunchTime: 2019-03-04 15:18:25 +0000 UTC,
+          MetadataOptions: {
+            HttpEndpoint: "enabled",
+            HttpPutResponseHopLimit: 1,
+            HttpTokens: "optional",
+            State: "applied"
+          },
+          Monitoring: {
+            State: "disabled"
+          },
+          NetworkInterfaces: [{
+              Association: {
+                IpOwnerId: "770552462706",
+                PublicDnsName: "ec2-3-104-151-118.ap-southeast-2.compute.amazonaws.com",
+                PublicIp: "3.104.151.118"
+              },
+              Attachment: {
+                AttachTime: 2019-02-11 00:02:27 +0000 UTC,
+                AttachmentId: "eni-attach-06f3bd42667971372",
+                DeleteOnTermination: true,
+                DeviceIndex: 0,
+                Status: "attached"
+              },
+              Description: "",
+              Groups: [{
+                  GroupId: "sg-dc8549b9",
+                  GroupName: "SERVER"
+                }],
+              InterfaceType: "interface",
+              MacAddress: "0a:e1:55:69:0d:fc",
+              NetworkInterfaceId: "eni-05640b46e39cef09b",
+              OwnerId: "770552462706",
+              PrivateDnsName: "ip-172-31-45-173.ap-southeast-2.compute.internal",
+              PrivateIpAddress: "172.31.45.173",
+              PrivateIpAddresses: [{
+                  Association: {
+                    IpOwnerId: "770552462706",
+                    PublicDnsName: "ec2-3-104-151-118.ap-southeast-2.compute.amazonaws.com",
+                    PublicIp: "3.104.151.118"
+                  },
+                  Primary: true,
+                  PrivateDnsName: "ip-172-31-45-173.ap-southeast-2.compute.internal",
+                  PrivateIpAddress: "172.31.45.173"
+                }],
+              SourceDestCheck: true,
+              Status: "in-use",
+              SubnetId: "subnet-092e7f4f",
+              VpcId: "vpc-e054be85"
+            }],
+          Placement: {
+            AvailabilityZone: "ap-southeast-2c",
+            GroupName: "",
+            Tenancy: "default"
+          },
+          PrivateDnsName: "ip-172-31-45-173.ap-southeast-2.compute.internal",
+          PrivateIpAddress: "172.31.45.173",
+          PublicDnsName: "ec2-3-104-151-118.ap-southeast-2.compute.amazonaws.com",
+          PublicIpAddress: "3.104.151.118",
+          RootDeviceName: "/dev/sda1",
+          RootDeviceType: "ebs",
+          SecurityGroups: [{
+              GroupId: "sg-dc8549b9",
+              GroupName: "SERVER"
+            }],
+          SourceDestCheck: true,
+          State: {
+            Code: 16,
+            Name: "running"
+          },
+          StateTransitionReason: "",
+          SubnetId: "subnet-092e7f4f",
+          Tags: [{
+              Key: "Name",
+              Value: "hits.beta"
+            }],
+          VirtualizationType: "hvm",
+          VpcId: "vpc-e054be85"
+        }],
+      OwnerId: "770552462706",
+      ReservationId: "r-00f1217d6f84a1138"
+    },
+    {
+      Instances: [{
+          AmiLaunchIndex: 0,
+          Architecture: "x86_64",
+          BlockDeviceMappings: [{
+              DeviceName: "/dev/sda1",
+              Ebs: {
+                AttachTime: 2017-06-20 03:51:14 +0000 UTC,
+                DeleteOnTermination: true,
+                Status: "attached",
+                VolumeId: "vol-033ef8c450e514ad9"
+              }
+            }],
+          CapacityReservationSpecification: {
+            CapacityReservationPreference: "open"
+          },
+          ClientToken: "InPIv1497930672928",
+          CpuOptions: {
+            CoreCount: 2,
+            ThreadsPerCore: 1
+          },
+          EbsOptimized: false,
+          EnaSupport: true,
+          HibernationOptions: {
+            Configured: false
+          },
+          Hypervisor: "xen",
+          ImageId: "ami-96666ff5",
+          InstanceId: "i-0b35689af2c9d0197",
+          InstanceType: "t2.medium",
+          KeyName: "NSIPSSH",
+          LaunchTime: 2019-03-04 15:18:25 +0000 UTC,
+          MetadataOptions: {
+            HttpEndpoint: "enabled",
+            HttpPutResponseHopLimit: 1,
+            HttpTokens: "optional",
+            State: "applied"
+          },
+          Monitoring: {
+            State: "disabled"
+          },
+          NetworkInterfaces: [{
+              Association: {
+                IpOwnerId: "770552462706",
+                PublicDnsName: "ec2-13-210-63-151.ap-southeast-2.compute.amazonaws.com",
+                PublicIp: "13.210.63.151"
+              },
+              Attachment: {
+                AttachTime: 2017-06-20 03:51:13 +0000 UTC,
+                AttachmentId: "eni-attach-5d63c9b4",
+                DeleteOnTermination: true,
+                DeviceIndex: 0,
+                Status: "attached"
+              },
+              Description: "",
+              Groups: [{
+                  GroupId: "sg-dc8549b9",
+                  GroupName: "SERVER"
+                }],
+              InterfaceType: "interface",
+              MacAddress: "02:f9:ac:ff:ff:21",
+              NetworkInterfaceId: "eni-e3187b99",
+              OwnerId: "770552462706",
+              PrivateDnsName: "ip-172-31-1-98.ap-southeast-2.compute.internal",
+              PrivateIpAddress: "172.31.1.98",
+              PrivateIpAddresses: [{
+                  Association: {
+                    IpOwnerId: "770552462706",
+                    PublicDnsName: "ec2-13-210-63-151.ap-southeast-2.compute.amazonaws.com",
+                    PublicIp: "13.210.63.151"
+                  },
+                  Primary: true,
+                  PrivateDnsName: "ip-172-31-1-98.ap-southeast-2.compute.internal",
+                  PrivateIpAddress: "172.31.1.98"
+                }],
+              SourceDestCheck: true,
+              Status: "in-use",
+              SubnetId: "subnet-437e8426",
+              VpcId: "vpc-e054be85"
+            }],
+          Placement: {
+            AvailabilityZone: "ap-southeast-2a",
+            GroupName: "",
+            Tenancy: "default"
+          },
+          PrivateDnsName: "ip-172-31-1-98.ap-southeast-2.compute.internal",
+          PrivateIpAddress: "172.31.1.98",
+          PublicDnsName: "ec2-13-210-63-151.ap-southeast-2.compute.amazonaws.com",
+          PublicIpAddress: "13.210.63.151",
+          RootDeviceName: "/dev/sda1",
+          RootDeviceType: "ebs",
+          SecurityGroups: [{
+              GroupId: "sg-dc8549b9",
+              GroupName: "SERVER"
+            }],
+          SourceDestCheck: true,
+          State: {
+            Code: 16,
+            Name: "running"
+          },
+          StateTransitionReason: "",
+          SubnetId: "subnet-437e8426",
+          Tags: [{
+              Key: "Name",
+              Value: "hits.dev - HITS Dev Test Server"
+            }],
+          VirtualizationType: "hvm",
+          VpcId: "vpc-e054be85"
+        }],
+      OwnerId: "770552462706",
+      ReservationId: "r-0f51081d9983bb02d"
+    },
+    {
+      Instances: [{
+          AmiLaunchIndex: 0,
+          Architecture: "x86_64",
+          BlockDeviceMappings: [{
+              DeviceName: "/dev/sda1",
+              Ebs: {
+                AttachTime: 2014-10-01 03:09:59 +0000 UTC,
+                DeleteOnTermination: true,
+                Status: "attached",
+                VolumeId: "vol-15295711"
+              }
+            },{
+              DeviceName: "/dev/sdf",
+              Ebs: {
+                AttachTime: 2019-02-21 01:48:43 +0000 UTC,
+                DeleteOnTermination: false,
+                Status: "attached",
+                VolumeId: "vol-0825355ec1f87b495"
+              }
+            }],
+          CapacityReservationSpecification: {
+            CapacityReservationPreference: "open"
+          },
+          ClientToken: "GbahR1412132995851",
+          CpuOptions: {
+            CoreCount: 2,
+            ThreadsPerCore: 1
+          },
+          EbsOptimized: false,
+          HibernationOptions: {
+            Configured: false
+          },
+          Hypervisor: "xen",
+          ImageId: "ami-95d7b4af",
+          InstanceId: "i-6e8dbf50",
+          InstanceType: "t2.large",
+          KeyName: "NSIPSSH",
+          LaunchTime: 2019-03-04 15:18:25 +0000 UTC,
+          MetadataOptions: {
+            HttpEndpoint: "enabled",
+            HttpPutResponseHopLimit: 1,
+            HttpTokens: "optional",
+            State: "applied"
+          },
+          Monitoring: {
+            State: "disabled"
+          },
+          NetworkInterfaces: [{
+              Association: {
+                IpOwnerId: "770552462706",
+                PublicDnsName: "ec2-54-66-142-11.ap-southeast-2.compute.amazonaws.com",
+                PublicIp: "54.66.142.11"
+              },
+              Attachment: {
+                AttachTime: 2014-10-01 03:09:56 +0000 UTC,
+                AttachmentId: "eni-attach-9aa6fea6",
+                DeleteOnTermination: true,
+                DeviceIndex: 0,
+                Status: "attached"
+              },
+              Description: "Primary network interface",
+              Groups: [{
+                  GroupId: "sg-dc8549b9",
+                  GroupName: "SERVER"
+                }],
+              InterfaceType: "interface",
+              MacAddress: "02:58:f9:5d:c3:21",
+              NetworkInterfaceId: "eni-1f64f17a",
+              OwnerId: "770552462706",
+              PrivateDnsName: "ip-172-31-5-129.ap-southeast-2.compute.internal",
+              PrivateIpAddress: "172.31.5.129",
+              PrivateIpAddresses: [{
+                  Association: {
+                    IpOwnerId: "770552462706",
+                    PublicDnsName: "ec2-54-66-142-11.ap-southeast-2.compute.amazonaws.com",
+                    PublicIp: "54.66.142.11"
+                  },
+                  Primary: true,
+                  PrivateDnsName: "ip-172-31-5-129.ap-southeast-2.compute.internal",
+                  PrivateIpAddress: "172.31.5.129"
+                }],
+              SourceDestCheck: true,
+              Status: "in-use",
+              SubnetId: "subnet-437e8426",
+              VpcId: "vpc-e054be85"
+            }],
+          Placement: {
+            AvailabilityZone: "ap-southeast-2a",
+            GroupName: "",
+            Tenancy: "default"
+          },
+          PrivateDnsName: "ip-172-31-5-129.ap-southeast-2.compute.internal",
+          PrivateIpAddress: "172.31.5.129",
+          PublicDnsName: "ec2-54-66-142-11.ap-southeast-2.compute.amazonaws.com",
+          PublicIpAddress: "54.66.142.11",
+          RootDeviceName: "/dev/sda1",
+          RootDeviceType: "ebs",
+          SecurityGroups: [{
+              GroupId: "sg-dc8549b9",
+              GroupName: "SERVER"
+            }],
+          SourceDestCheck: true,
+          State: {
+            Code: 16,
+            Name: "running"
+          },
+          StateTransitionReason: "",
+          SubnetId: "subnet-437e8426",
+          Tags: [{
+              Key: "Name",
+              Value: "hits - HITS Server"
+            }],
+          VirtualizationType: "hvm",
+          VpcId: "vpc-e054be85"
+        }],
+      OwnerId: "770552462706",
+      ReservationId: "r-ee296dd0"
+    }
+  ]

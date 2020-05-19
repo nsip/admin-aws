@@ -6,12 +6,17 @@ type AdminAwsRegion struct {
 	ID string
 }
 
+// XXX AdminAwsExpect
+//  - List of EC2 we expect to see
+//  - And the tests,e.g. ping
+
 // fmt.Printf("%v,%v,%v,%v\n", region, iid, pip, nt)
 type AdminAwsEc2 struct {
-	ID       string
-	Region   string
-	Name     string
-	PublicIP string
+	ID           string
+	Region       string
+	Name         string
+	PublicIP     string
+	InstanceType string
 }
 
 type AdminAwsStore struct {
